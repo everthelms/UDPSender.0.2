@@ -1,0 +1,16 @@
+
+build/windows/.vs/UdpSender/v16/.suo
+*.db
+*.opendb
+*.ipch
+*.user
+*.obj
+*.log
+*.tlog
+build/windows/UdpSender/x64/Release/UdpSender.vcxproj.FileListAbsolute.txt
+*.pdb
+build/windows/x64/Release/UdpSender.dll
+build/windows/x64/Release/UdpSender.exp
+build/windows/x64/Release/UdpSender.iobj
+build/windows/x64/Release/UdpSender.ipdb
+build/windows/x64/Release/UdpSender.lib
