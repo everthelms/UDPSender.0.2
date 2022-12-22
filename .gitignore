@@ -14,3 +14,7 @@ build/windows/x64/Release/UdpSender.exp
 build/windows/x64/Release/UdpSender.iobj
 build/windows/x64/Release/UdpSender.ipdb
 build/windows/x64/Release/UdpSender.lib
+*.ipdb
+*.iobj
+*.recipe
+*.idb
