@@ -45,6 +45,9 @@ extern "C"
 			{
 				std::string ipstr = nextmessage.getParameterValue("ip");
 				std::string porstr = nextmessage.getParameterValue("port");
+				std::string confirmto = nextmessage.getParameterValue("confirmto");
+				
+
 
 				//Initialise winsock
 				printf("\nInitialising Winsock...");
@@ -69,6 +72,9 @@ extern "C"
 				si_other.sin_family = AF_INET;
 				si_other.sin_port = htons(targetport);
 				si_other.sin_addr.S_un.S_addr = inet_addr(ipstr.c_str());
+
+				messageHub->sendLine(confirmto, "confirm_init?id=" + myID);
+
 			}
 			if (nextmessage.getCommand() == "data_in")
 			{
