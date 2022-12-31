@@ -86,13 +86,13 @@ extern "C"
 
                 #if defined(_MSC_VER)
                 //Initialise winsock
-				printf("\nInitialising Winsock...");
+				//printf("\nInitialising Winsock...");
 				if (WSAStartup(MAKEWORD(2, 2), &wsa) != 0)
 				{
 					printf("Failed. Error Code : %d", WSAGetLastError());
 					exit(EXIT_FAILURE);
 				}
-				printf("Initialised.\n");
+				//printf("Initialised.\n");
                 #else
 
                 #endif
@@ -104,7 +104,7 @@ extern "C"
 				{
 					printf("Could not create socket : %d", WSAGetLastError());
 				}
-				printf("Socket created.\n");
+				//printf("Socket created.\n");
                 #else
                 if ((s = socket(AF_INET, SOCK_DGRAM, 0)) < 0 )
                 {
