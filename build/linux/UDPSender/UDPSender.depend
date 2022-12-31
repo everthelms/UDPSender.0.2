@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1672055402 source:/home/evert/files/repos/UDPSender.0.2/src/main.cpp
+1672497999 source:/home/evert/files/repos/UDPSender.0.2/src/main.cpp
 	<stdio.h>
 	<winsock2.h>
 	<string.h>
