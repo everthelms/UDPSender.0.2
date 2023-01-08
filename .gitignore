@@ -21,3 +21,5 @@ build/windows/x64/Release/UdpSender.lib
 *.dll
 *.dll
 *.dll
+build/windows/.vs/UdpSender/v16/Browse.VC.db-shm
+build/windows/.vs/UdpSender/v16/Browse.VC.db-wal
