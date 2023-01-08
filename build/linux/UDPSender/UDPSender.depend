@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1672497999 source:/home/evert/files/repos/UDPSender.0.2/src/main.cpp
+	<stdio.h>
+	<winsock2.h>
+	<string.h>
+	<string>
+	<iostream>
+	"MessageHub.h"
+	"RCMessage.h"
+
+1671960955 /home/evert/files/repos/RCLib/include/MessageHub.h
+	"TcpClient.h"
+	"MessageQueue.h"
+	<vector>
+	<map>
+	<string>
+	<mutex>
+
+1671960955 /home/evert/files/repos/RCLib/include/TcpClient.h
+	<winsock2.h>
+	<windows.h>
+	<unistd.h>
+	<sys/types.h>
+	<sys/socket.h>
+	<netinet/in.h>
+	<arpa/inet.h>
+	<stdio.h>
+	<string>
+	<vector>
+
+1671960955 /home/evert/files/repos/RCLib/include/MessageQueue.h
+	<mutex>
+	<condition_variable>
+
+1671960955 /home/evert/files/repos/RCLib/include/RCMessage.h
+	<string>
+	<map>
+	<vector>
+
