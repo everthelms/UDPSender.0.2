@@ -68,6 +68,7 @@ void run(std::string appid, MessageHub* messageHub)
     struct sockaddr_in si_other;    // target socket
     int slen = sizeof(si_other);
 
+    int packagecounter = 0;
 
     // *** Here starts the Messageloop ***
     while (true)
@@ -142,16 +143,22 @@ void run(std::string appid, MessageHub* messageHub)
             char* sendbuf = (char*)pointer;
             int sendbuflen = std::stoi(bufferlengthstr);
 
+            // **** new: add package-counter at the end ****
+            char* sendbufpluscounter = (char*)malloc(sendbuflen + sizeof(int));
+            memcpy(sendbufpluscounter, sendbuf, sendbuflen );
+            memcpy(sendbufpluscounter+ sendbuflen, &packagecounter, sizeof(int));
+            
+
 
 #if defined(_MSC_VER)
-            if (sendto(s, sendbuf, sendbuflen, 0, (struct sockaddr*)&si_other, slen) == SOCKET_ERROR)
+            if (sendto(s, sendbufpluscounter, sendbuflen+ sizeof(int), 0, (struct sockaddr*)&si_other, slen) == SOCKET_ERROR)
             {
                 printf("sendto() failed with error code : %d", WSAGetLastError());
             }
 #else
-            sendto(s, sendbuf,sendbuflen,0,(struct sockaddr *)&si_other, slen);
+            sendto(s, sendbufpluscounter,sendbuflen+ sizeof(int),0,(struct sockaddr *)&si_other, slen);
 #endif
-
+            free(sendbufpluscounter);
             free(sendbuf);
 
         }
