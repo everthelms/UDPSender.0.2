@@ -160,7 +160,7 @@ void run(std::string appid, MessageHub* messageHub)
 #endif
             free(sendbufpluscounter);
             free(sendbuf);
-
+            packagecounter++;
         }
 
         else if (nextmessage.getCommand() == "end")
